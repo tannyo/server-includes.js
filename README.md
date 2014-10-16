@@ -8,9 +8,9 @@ Emulate apache server side file includes in javascript.
 
 ## Notes
 
-Put the script element for server-includes before all your other javascript is loaded. This allows server-includes to run and process includes that may contain script elements. If you put your other javascript in an include at the bottom of your code, you can make sure that all the DOM is loaded before running javascript that may rely on DOM elements.
+Put the script element for server-includes before all your other javascript is loaded. This allows server-includes to run and process includes that may contain script elements. If you put your other javascript in an include at the bottom of your code, you can make sure that the DOM is loaded before running javascript that may rely on DOM elements.
 
-I needed to test a website that used apache server side virtual file includes. Unfortunately I did not have an apache server available (don't ask) so I wrote a javascript module to do the includes for me. Since the website only used virtual includes, the code treats virtual and normal includes the same. Since the module uses AJAX calls to get the include fragments, it must be run from a server. This means that you can call any server side program to return the data you need. The website I was called in to work on used the following format for their web pages.
+I needed to test a website that used apache server side virtual file includes. Unfortunately I did not have an apache server available, not even locally (don't ask), so I wrote a javascript module to do the includes for me. Since the website only used virtual includes, the code treats virtual and normal includes the same. Since the module uses AJAX calls to get the include fragments, it must be run from a server. This means that you can call any server side program to return the data you need. The website I was called in to work on used the following format for their web pages.
 
     <!DOCTYPE html>
     <html lang="en">

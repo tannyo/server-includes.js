@@ -12,7 +12,7 @@
  * 2014-05-02 TKO Created by Tanny O'Haley
  * 2014-09-04 TKO Added ability to process nested includes.
  */
-(function server_includes(callback){
+(function server_includes(callback) {
   'use strict';
 
   var run_server_includes = 1,
